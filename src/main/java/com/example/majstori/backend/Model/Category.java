@@ -2,12 +2,14 @@ package com.example.majstori.backend.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "Category")
 @Data
+@NoArgsConstructor
 public class Category {
 
     @Id
@@ -23,9 +25,6 @@ public class Category {
 
     @ManyToMany(mappedBy = "categories")
     private List<Handyman> handymen;
-
-    public Category() {
-    }
 
     public Category(String category_name, String picture_url) {
         this.category_name = category_name;

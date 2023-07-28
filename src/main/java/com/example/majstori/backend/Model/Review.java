@@ -2,12 +2,14 @@ package com.example.majstori.backend.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "Review")
 @Data
+@NoArgsConstructor
 public class Review {
 
     @Id
